@@ -8,10 +8,13 @@
 </head>
 <body>
 
-<a href="/pages/about">About</a>
-<a href="/pages/contact">Contact</a>
-<%= yield %>
-<p>Sterling Houghton Copyright 2014</p>
+  <%= render 'layouts/header' %>
+
+  <div class="container"
+    <%= yield %>
+
+    <%= render 'layouts/footer' %>
+  </div>
 
 </body>
 </html>
