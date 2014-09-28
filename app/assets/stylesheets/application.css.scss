@@ -22,12 +22,6 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
- body {
-   background-color: #f5f5f1;
-   color: #333333;
-   font-family: Arial, Helvetica, sans-serif;
- }
-
  /* top nav bar*/
 
  $bgDefault      : #ffffff;
@@ -88,6 +82,12 @@ $colHighlight   : #000000;
 				background-color: $bgHighlight; }}}
 }
 
+body {
+  background-color: #f5f5f1;
+  color: #333333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .col-md-3:nth-child(4n+1) {
   clear: left;
 }
@@ -100,4 +100,8 @@ $colHighlight   : #000000;
 
 .money {
   color: #78C042;
+}
+
+.center {
+  text-align: center;
 }
