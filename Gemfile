@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.1.2"
 
 gem 'rails'
 gem 'pg'
@@ -10,6 +11,10 @@ gem 'turbolinks'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem "paperclip", "~> 4.2"
+
+group :production do
+  gem 'rails_12factor'
+end
 
 group :development do
   gem 'better_errors'
