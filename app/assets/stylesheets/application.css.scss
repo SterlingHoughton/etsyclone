@@ -105,3 +105,12 @@ body {
 .center {
   text-align: center;
 }
+
+.jumbotron {
+  color: white;
+  width: 100%;
+  background-image: url('banner3.jpg');
+  h2 {
+    font-family: guardian-egyptt, georgia, serif;
+  }
+}
