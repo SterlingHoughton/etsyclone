@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   validates :name, presence: true
 
   has_many :listings, dependent: :destroy
+  has_many :sales, class_name: "Order", foreign_key: "seller_id"
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
