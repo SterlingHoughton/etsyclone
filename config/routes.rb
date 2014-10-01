@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :listings do
-    resources :orders
+    resources :orders, only: [:new, :create]
   end
 
   devise_for :users
