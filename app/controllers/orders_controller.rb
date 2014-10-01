@@ -10,23 +10,10 @@ class OrdersController < ApplicationController
     @orders = Order.all.where(buyer: current_user).order("created_at DESC")
   end
 
-  # GET /orders
-  def index
-    @orders = Order.all
-  end
-
-  # GET /orders/1
-  def show
-  end
-
   # GET /orders/new
   def new
     @order = Order.new
     @listing = Listing.find(params[:listing_id])
-  end
-
-  # GET /orders/1/edit
-  def edit
   end
 
   # POST /orders
@@ -43,21 +30,6 @@ class OrdersController < ApplicationController
     else
       render :new
     end
-  end
-
-  # PATCH/PUT /orders/1
-  def update
-    if @order.update(order_params)
-      redirect_to @order, notice: 'Order was successfully updated.'
-    else
-      render :edit
-    end
-  end
-
-  # DELETE /orders/1
-  def destroy
-    @order.destroy
-    redirect_to orders_url, notice: 'Order was successfully destroyed.'
   end
 
   private
