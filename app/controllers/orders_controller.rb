@@ -23,6 +23,7 @@ class OrdersController < ApplicationController
   # POST /orders
   def create
     @order = Order.new(order_params)
+    @listing = Listing.find(params[:listing_id])
     @order.buyer_id = current_user.id
 
     if @order.save
