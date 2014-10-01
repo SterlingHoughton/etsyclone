@@ -28,9 +28,10 @@ class OrdersController < ApplicationController
     @seller = @listing.user
     @order.listing_id = @listing.id
     @order.buyer_id = current_user.id
+    @order.seller_id = @seller.id
 
     if @order.save
-      redirect_to @order, notice: 'Order was successfully created.'
+      redirect_to root_url, notice: 'Order was successfully created.'
     else
       render :new
     end
