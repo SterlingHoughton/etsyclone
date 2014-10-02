@@ -39,6 +39,9 @@ class ListingsController < ApplicationController
       :bank_account => token
       )
 
+    current_user.recipient = recipient.id
+    current_user.save 
+
     if @listing.save
       redirect_to @listing, notice: 'Listing was successfully created.'
     else
