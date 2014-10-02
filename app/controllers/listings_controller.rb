@@ -30,6 +30,15 @@ class ListingsController < ApplicationController
     @listing = Listing.new(listing_params)
     @listing.user_id = current_user.id
 
+    Stripe.api_key = ENV["STRIPE_API_KEY"]
+    token = params[:stripeToken]
+
+    recipient = Stripe::Recipient.create(
+      :name => current_user.name,
+      :type => "individual",
+      :bank_account => token
+      )
+
     if @listing.save
       redirect_to @listing, notice: 'Listing was successfully created.'
     else
