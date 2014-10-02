@@ -5,9 +5,7 @@ Rails.application.routes.draw do
   end
 
   devise_for :users
-
-  get 'pages/about'
-  get 'pages/contact'
+  
   get 'seller' => "listings#seller"
   get 'sales' => "orders#sales"
   get 'purchases' => "orders#purchases"
