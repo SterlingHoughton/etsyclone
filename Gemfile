@@ -17,6 +17,8 @@ gem "figaro"
 gem 'devise'
 gem 'stripe'
 gem 'rest-client'
+gem 'will_paginate', '~> 3.0'
+gem 'will_paginate-bootstrap'
 
 group :production do
   gem 'rails_12factor'
