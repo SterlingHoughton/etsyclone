@@ -54,9 +54,8 @@
       <%= label_tag :account_number %>
       <%= text_field_tag :account_number, nil, { :name => nil, :'data-stripe' => "accountNumber", class:"form-control" } %>
     </div>
-
+  <% end %>
     <div class="form-group">
       <%= f.submit class:"btn btn-default" %>
     </div>
-  <% end %>
 <% end %>
