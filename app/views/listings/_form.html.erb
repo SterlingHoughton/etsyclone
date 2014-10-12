@@ -37,7 +37,6 @@
     <%= f.label :image %>
     <%= f.file_field :image, class: "form-control" %>
   </div>
-
   <% if current_user.recipient.blank? %>
     <br>
     <h1>Bank Account Information</h1>
@@ -55,7 +54,7 @@
       <%= text_field_tag :account_number, nil, { :name => nil, :'data-stripe' => "accountNumber", class:"form-control" } %>
     </div>
   <% end %>
-    <div class="form-group">
-      <%= f.submit class:"btn btn-default" %>
-    </div>
+  <div class="form-group">
+    <%= f.submit class:"btn btn-default" %>
+  </div>
 <% end %>
