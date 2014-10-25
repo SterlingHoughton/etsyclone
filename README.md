@@ -18,7 +18,7 @@ Web Technologies used:
 *CSS/Sass  
 *Various Gems  
 *PostgreSQL  
-*Stripe API
+*Stripe API  
 *Facebook API
 
 
